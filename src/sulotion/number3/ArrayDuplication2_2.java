@@ -2,8 +2,8 @@ package sulotion.number3;
 
 /**
  * created by tianfeng on 2018/11/19
- * 二分查找的思路查找重复元素，比如大小在1到N之间的元素大于n个，那么一定有元素重复；但小于n个使也有可能存在重复，
- * 所以这个方法有些重复的元素查不出来
+ * 不修改数组找出重复元素：二分查找的思路查找重复元素，比如大小在1到N之间的元素大于n个，那么一定有元素重复；
+ * 但小于n个使也有可能存在重复，所以这个方法有些重复的元素查不出来
  */
 public class ArrayDuplication2_2 {
     public static void resolve(int[] a,int n){//n表示数组中数的大小范围是1到n

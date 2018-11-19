@@ -17,6 +17,6 @@ public class ArrayDuplication1_2 {
 
     public static void main(String[] args) {//测试用例
         int[] array = {2,3,1,0,2,5,3};
-        ArrayDuplication2_2.resolve(array,6);
+        ArrayDuplication1_4.resolve(array,6);
     }
 }

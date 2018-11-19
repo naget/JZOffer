@@ -4,6 +4,7 @@ import jdk.nashorn.internal.ir.IfNode;
 
 /**
  * created by tianfeng on 2018/11/19
+ * 不修改数组找出重复元素，采用辅助数组
  */
 public class ArrayDuplication2_1 {
     public static void resolve(int[] a,int n){//n表示这个数组中数的大小范围是1到n
