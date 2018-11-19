@@ -141,9 +141,13 @@ public class Number32 {
         queue.add(node);
         while (!queue.isEmpty()){
             TreeNode node1 = queue.poll();
-            System.out.print(node1.value+" ");
-            if (node1.left!=null)queue.add(node1.left);
-            if (node1.right!= null)queue.add(node1.right);
+            if (node1!=null)
+            {
+                System.out.print(node1.value+" ");
+                if (node1.left!=null)queue.add(node1.left);
+                if (node1.right!= null)queue.add(node1.right);
+            }
+
         }
     }
     //之字遍历二叉树
