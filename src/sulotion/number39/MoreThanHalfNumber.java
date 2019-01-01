@@ -30,10 +30,10 @@ public class MoreThanHalfNumber {
     private static int partition(int[] numbers,int start,int end){
         int mid = numbers[start];
         int i = start;
-        int j = end;
+        int j = end+1;
         while (true){
             while (numbers[++i]<mid)if (i==end)break;
-            while (numbers[j--]>mid)if (j==start)break;
+            while (numbers[--j]>mid)if (j==start)break;
             if (i>=j)break;
             int tem = numbers[i];
             numbers[i] = numbers[j];
