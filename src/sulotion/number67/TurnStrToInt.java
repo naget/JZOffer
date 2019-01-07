@@ -8,10 +8,10 @@ package sulotion.number67;
  * 能使用atoi或者其他类似的库函数。
  */
 public class TurnStrToInt {
-    public static int stringToInt(String s) throws Exception{
+    public static long stringToInt(String s) throws Exception{
         if (s==null)throw new Exception("非法输入");
         boolean minus = false;
-        int sum = 0;
+        long sum = 0;
         int length = s.length();
         double base = Math.pow(10,length-1);
         for (int i = 0;i<s.length();i++){
@@ -29,14 +29,16 @@ public class TurnStrToInt {
             else {
                 int number = c-'0';
                 sum += number*base;
+                if (!minus&&sum>Integer.MAX_VALUE||minus&&-sum<Integer.MIN_VALUE)throw new Exception("非法输入");
                 base = base/10;
             }
 
         }
+        if (minus)sum = -sum;
         return sum;
     }
 
     public static void main(String[] args) throws Exception {
-        System.out.println(stringToInt("123"));
+        System.out.println(stringToInt("-88123"));
     }
 }
